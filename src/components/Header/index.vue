@@ -1,9 +1,9 @@
 <template>
     <div id="header">
         <div class="header-body">
-            <div class="icon"></div>
+            <div class="icon" ></div>
             <div class="text">Chicken Music</div>
-            <div class="mine"><i class="icon-mine"></i></div>
+            <div class="mine" @touchstart="toUser"><i class="icon-mine"></i></div>
         </div>
     </div>
 </template>
@@ -11,7 +11,12 @@
 <script>
     export default {
         name:'Header',
-        props:['title']
+        props:['title'],
+        methods:{
+            toUser(){
+                this.$router.push('/user');
+            }
+        }
     }
 </script>
 

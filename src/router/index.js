@@ -5,6 +5,7 @@ import searchRouter from './search'
 import starRouter from './star'
 import commendRouter from './recommend'
 import testRouter from './test'
+import userRouter from './user'
 
 Vue.use(Router)
 
@@ -17,6 +18,7 @@ export default new Router({
     starRouter,
     commendRouter,
     testRouter,
+    userRouter,
     {
       path:'/*',
       redirect:'/recommend'
